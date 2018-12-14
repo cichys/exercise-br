@@ -7,7 +7,7 @@ import SearchResult from '../components/SearchResult';
 
 const SearchContainer = () => (
 
-    <Query query={GET_POKEMON}>
+    <Query query={GET_POKEMON} variables={ {name: 'Pikachu'} }>
         {({ loading, error, data }) => {
             if (loading) return "Loading...";
             if (error) return `Error! ${error.message}`;
