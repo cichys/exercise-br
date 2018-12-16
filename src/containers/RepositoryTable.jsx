@@ -3,6 +3,7 @@ import { Query } from 'react-apollo';
 
 import GET_SELECTED_REPOSITORIES from '../graphql/queries/getSelectedRepositories';
 import RepositoryRow from '../components/RepositoryRow';
+import CounterSelected from '../components/CounterSelected';
 
 
 const isSelected = (id, selectedRepositories) => {
@@ -18,7 +19,7 @@ const RepositoryTable = ({ data }) => (
                         <tr>
                             <th>Repo Name</th>
                             <th></th>
-                            <th></th>
+                            <th><CounterSelected data={responseSelected.selectedRepositoryIds} /></th>
                         </tr>
                     </thead>
                     <tbody>
