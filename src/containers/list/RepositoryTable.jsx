@@ -1,9 +1,9 @@
 import React from 'react';
 import { Query } from 'react-apollo';
 
-import GET_SELECTED_REPOSITORIES from '../graphql/queries/getSelectedRepositories';
-import RepositoryRow from '../components/RepositoryRow';
-import CounterSelected from '../components/CounterSelected';
+import GET_SELECTED_REPOSITORIES from '../../graphql/queries/getSelectedRepositories';
+import RepositoryRow from '../../components/RepositoryRow';
+import CounterSelected from '../../components/CounterSelected';
 
 
 const isSelected = (id, selectedRepositories) => {

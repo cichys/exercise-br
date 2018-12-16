@@ -1,9 +1,9 @@
 import React from 'react';
 import { Query } from 'react-apollo';
 
-import GET_REPOSITORY from '../graphql/queries/getRepositoryById';
-import RepositoryDetail from '../components/RepositoryDetail';
-import HideDetail from '../containers/HideDetail';
+import GET_REPOSITORY from '../../graphql/queries/getRepositoryById';
+import RepositoryDetail from '../../components/RepositoryDetail';
+import BtnHideDetail from './BtnHideDetail';
 
 
 const RepositoryDetailOverlay = ({ data }) => (
@@ -17,7 +17,7 @@ const RepositoryDetailOverlay = ({ data }) => (
                 <div className="overlay">
                     <RepositoryDetail data={data.repository} />
                     <br /><br />
-                    <HideDetail />
+                    <BtnHideDetail />
                 </div>
             );
         }}

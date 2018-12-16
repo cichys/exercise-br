@@ -1,7 +1,7 @@
 import React from 'react';
 import { Query } from 'react-apollo';
 
-import GET_DETAIL_REPOSITORY from '../graphql/queries/getDetailRepository';
+import GET_DETAIL_REPOSITORY from '../../graphql/queries/getDetailRepository';
 import RepositoryDetail from './RepositoryDetailOverlay';
 
 

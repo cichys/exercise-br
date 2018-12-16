@@ -1,20 +1,20 @@
 import React from 'react';
 import { Mutation } from 'react-apollo';
 
-import DETAIL_REPOSITORY from '../graphql/mutations/detailRepository';
+import DETAIL_REPOSITORY from '../../graphql/mutations/detailRepository';
 
 
-const HideDetail = () => (
+const ShowDetail = ({ id }) => (
     <Mutation
         mutation={DETAIL_REPOSITORY}
-        variables={{ id: null }}
+        variables={{ id }}
     >
         {(detailRepository, result) => (
             <button type="button" onClick={detailRepository}>
-                hide detail
+                Show detail
             </button>
         )}
     </Mutation>
 );
 
-export default HideDetail;
+export default ShowDetail;

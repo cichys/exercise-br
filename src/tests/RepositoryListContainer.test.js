@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { MockedProvider } from 'react-apollo/test-utils';
 
-import RepositoryListContainer from '../containers/RepositoryListContainer';
+import RepositoryListContainer from '../containers/list/RepositoryListContainer';
 import GET_REPOSITORIES from '../graphql/queries/getRepositories';
 import GET_SELECTED_REPOSITORIES from '../graphql/queries/getSelectedRepositories';
 

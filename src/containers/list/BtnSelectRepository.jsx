@@ -1,10 +1,10 @@
 import React from 'react';
 import { Mutation } from 'react-apollo';
 
-import SELECT_REPOSITORY from '../graphql/mutations/selectRepository';
+import SELECT_REPOSITORY from '../../graphql/mutations/selectRepository';
 
 
-const Select = ({ id, isSelected }) => (
+const BtnSelectRepository = ({ id, isSelected }) => (
     <Mutation
         mutation={SELECT_REPOSITORY}
         variables={{ id, isSelected }}
@@ -17,4 +17,4 @@ const Select = ({ id, isSelected }) => (
     </Mutation>
 );
 
-export default Select;
+export default BtnSelectRepository;

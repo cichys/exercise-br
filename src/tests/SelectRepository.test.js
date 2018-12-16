@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { MockedProvider } from 'react-apollo/test-utils';
 
-import SelectRepository from '../containers/SelectRepository';
+import BtnSelectRepository from '../containers/list/BtnSelectRepository';
 import SELECT_REPOSITORY from '../graphql/mutations/selectRepository';
 
 const wait = require('waait');
@@ -22,7 +22,7 @@ xdescribe('Select Repository component', () => {
     it('renders', async () => {
         const component = renderer.create(
             <MockedProvider mocks={mocks} addTypename={false}>
-                <SelectRepository />
+                <BtnSelectRepository />
             </MockedProvider>,
         );
 

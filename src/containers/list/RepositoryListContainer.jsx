@@ -1,8 +1,8 @@
 import React from 'react';
 import { Query } from 'react-apollo';
 
-import GET_REPOSITORIES from '../graphql/queries/getRepositories';
-import RepositoryTable from '../containers/RepositoryTable';
+import GET_REPOSITORIES from '../../graphql/queries/getRepositories';
+import RepositoryTable from './RepositoryTable';
 
 
 const RepositoryListContainer = () => (
