@@ -19,7 +19,11 @@ const RepositoryTable = ({ data }) => (
                         <tr>
                             <th>Repo Name</th>
                             <th></th>
-                            <th><CounterSelected data={responseSelected.selectedRepositoryIds} /></th>
+                            <th>
+                                <CounterSelected
+                                    data={responseSelected.selectedRepositoryIds} 
+                                />
+                            </th>
                         </tr>
                     </thead>
                     <tbody>
@@ -35,8 +39,6 @@ const RepositoryTable = ({ data }) => (
             )
         }}
     </Query>
-
-    
 );
 
 export default RepositoryTable;
