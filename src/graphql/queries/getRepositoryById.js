@@ -4,8 +4,6 @@ import gql from 'graphql-tag';
 const GET_REPOSITORY = gql`
     query GET_REPOSITORY($id: ID!) {
         repository(id: $id) {
-            id
-            name
             full_name
             html_url
             description

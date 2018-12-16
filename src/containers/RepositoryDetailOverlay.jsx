@@ -16,6 +16,7 @@ const RepositoryDetailOverlay = ({ data }) => (
             return (
                 <div className="overlay">
                     <RepositoryDetail data={data.repository} />
+                    <br /><br />
                     <HideDetail />
                 </div>
             );
