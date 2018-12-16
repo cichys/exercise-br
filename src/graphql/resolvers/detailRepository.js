@@ -2,7 +2,6 @@ import GET_DETAIL_REPOSITORY from '../queries/getDetailRepository';
 
 
 const detailRepository = (_, { id }, { cache }) => {
-    console.log(id)
     let { detailRepository } = cache.readQuery({
         query: GET_DETAIL_REPOSITORY,
     });

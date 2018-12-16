@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
 
-import './assets/css/index.css';
-import App from './components/App';
 import * as serviceWorker from './serviceWorker';
+import './assets/css/index.css';
 import config from './config/config';
 import selectRepository from './graphql/resolvers/selectRepository';
 import detailRepository from './graphql/resolvers/detailRepository';
+import App from './components/App';
 
 
 const client = new ApolloClient({

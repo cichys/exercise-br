@@ -9,7 +9,6 @@ const RepositoryDetailContainer = () => (
 
     <Query query={GET_DETAIL_REPOSITORY}>
         {({ data }) => {
-            console.log(data)
             if (!data.detailRepository) return null;
 
             return <RepositoryDetail data={data.detailRepository} />;

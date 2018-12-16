@@ -65,11 +65,13 @@ table tr td {
 
 
 .overlay {
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    min-height: 400px;
     position: fixed;
-    top: 30px;
-    left: 30px;
+    top: 50px;
+    left: 100px;
+    left: 50%;
+    margin-left: -250px;
     background: white;
     border: 5px solid gray;
     padding: 30px;
