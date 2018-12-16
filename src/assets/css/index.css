@@ -62,3 +62,14 @@ table tr td {
     border-bottom: 1px solid #ccc;
     padding: 5px;
 }
+
+
+.overlay {
+    width: 400px;
+    height: 400px;
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    background: white;
+    border: 5px solid gray;
+}

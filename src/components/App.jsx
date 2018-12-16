@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import RepositoryListContainer from '../containers/RepositoryListContainer';
+import RepositoryDetailContainer from '../containers/RepositoryDetailContainer';
 
 
 class App extends Component {
@@ -12,6 +13,7 @@ class App extends Component {
                 </header>
                 <main>
                     <RepositoryListContainer />
+                    <RepositoryDetailContainer />
                 </main>
             </div>
         );

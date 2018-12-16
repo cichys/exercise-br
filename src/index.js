@@ -8,17 +8,20 @@ import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 import config from './config/config';
 import selectRepository from './graphql/resolvers/selectRepository';
+import detailRepository from './graphql/resolvers/detailRepository';
 
 
 const client = new ApolloClient({
     uri: config.api.url,
     clientState: {
         defaults: {
-            selectedRepositoryIds: []
+            selectedRepositoryIds: [],
+            detailRepository: null
         },
         resolvers: {
             Mutation: {
                 selectRepository,
+                detailRepository
             }
         }
     }

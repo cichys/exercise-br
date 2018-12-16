@@ -3,8 +3,7 @@ import React from 'react';
 
 const RepositoryDetail = ({ data }) => (
     <div>
-        selected?
-        {data.name}
+        { data.name }
     </div>
 );
 

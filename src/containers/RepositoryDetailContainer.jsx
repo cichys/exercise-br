@@ -1,20 +1,21 @@
 import React from 'react';
 import { Query } from 'react-apollo';
 
-import GET_REPOSITORY from '../graphql/queries/getRepositoryById';
-import RepositoryDetail from '../components/RepositoryDetail';
+import GET_DETAIL_REPOSITORY from '../graphql/queries/getDetailRepository';
+import RepositoryDetail from './RepositoryDetailOverlay';
 
 
 const RepositoryDetailContainer = () => (
 
-    <Query query={GET_REPOSITORY} variables={{id: '1'}}>
-        {({ loading, error, data }) => {
-            if (loading) return "Loading...";
-            if (error) return `Error! ${error.message}`;
+    <Query query={GET_DETAIL_REPOSITORY}>
+        {({ data }) => {
+            console.log(data)
+            if (!data.detailRepository) return null;
 
-            return <RepositoryDetail data={data.repository} />;
+            return <RepositoryDetail data={data.detailRepository} />;
         }}
     </Query>
 );
+
 
 export default RepositoryDetailContainer;
