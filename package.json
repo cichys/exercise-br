@@ -27,6 +27,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "react-test-renderer": "^16.6.3"
+    "react-test-renderer": "^16.6.3",
+    "waait": "^1.0.2"
   }
 }
