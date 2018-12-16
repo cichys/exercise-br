@@ -2,7 +2,7 @@ import React from 'react';
 import { Query } from 'react-apollo';
 
 import GET_REPOSITORIES from '../graphql/queries/getRepositories';
-import RepositoryRow from '../components/RepositoryRow';
+import RepositoryTable from '../components/RepositoryTable';
 
 
 const RepositoryListContainer = () => (
@@ -13,7 +13,7 @@ const RepositoryListContainer = () => (
             if (error) return `Error! ${error.message}`;
             if (!data || !data.repositories || data.repositories.length === 0) return 'No data';
 
-            return data.repositories.map(item => <RepositoryRow data={item} />);
+            return <RepositoryTable data={data.repositories} />;
         }}
     </Query>
 );
