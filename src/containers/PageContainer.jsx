@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
-import SearchContainer from './SearchContainer';
+import RepositoryListContainer from './RepositoryListContainer';
+import RepositoryDetailContainer from './RepositoryDetailContainer';
 
 
 class PageContainer extends Component {
@@ -8,7 +9,7 @@ class PageContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            pageToDisplay: 'hashtag'
+            pageToDisplay: 'repositories'
         };
     }
 
@@ -19,10 +20,12 @@ class PageContainer extends Component {
 
 
     renderPage = () => {
-        if (this.state.pageToDisplay === 'search') {
-            return <SearchContainer />;
+        if (this.state.pageToDisplay === 'repositories') {
+            return <RepositoryListContainer />;
+        } else if (this.state.pageToDisplay === 'repository') {
+            return <RepositoryDetailContainer />;
         } else if (this.state.pageToDisplay === 'second') {
-            return <SearchContainer />;
+            return <RepositoryListContainer />;
         }
     }
 
@@ -31,7 +34,7 @@ class PageContainer extends Component {
         return (
             <div>
                 <header>
-                    <button onClick={() => this.changePage('search')}>Name search</button>
+                    <button onClick={() => this.changePage('repositories')}>Repo list</button>
                     <button onClick={() => this.changePage('second')}>Second</button>
                 </header>
                 <main>

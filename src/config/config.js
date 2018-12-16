@@ -1,5 +1,5 @@
 export default {
     api: {
-        url: 'https://graphql-pokemon.now.sh/'
+        url: 'http://localhost:4000/'
     }
 };

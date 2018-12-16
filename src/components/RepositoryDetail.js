@@ -1,10 +1,11 @@
 import React from 'react';
 
-const SearchResult = ({ data }) => (
+
+const RepositoryDetail = ({ data }) => (
     <div>
         selected?
         {data.name}
     </div>
 );
 
-export default SearchResult;
+export default RepositoryDetail;
