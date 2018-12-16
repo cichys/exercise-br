@@ -4,17 +4,18 @@ import { MockedProvider } from 'react-apollo/test-utils';
 
 import RepositoryRow from '../components/RepositoryRow';
 
+
 const data = {
     id: 103,
     name: 'Repo name'
 };
 
-
+let component = null;
 
 describe('Repository Row component', () => {
 
-    it('renders without crashing', () => {
-        renderer.create(
+    beforeEach(() => {
+        component = renderer.create(
             <MockedProvider addTypename={false}>
                 <RepositoryRow data={data} isSelected={false} />
             </MockedProvider>,
@@ -22,14 +23,7 @@ describe('Repository Row component', () => {
     });
 
     it('renders cell contents', () => {
-        const component = renderer.create(
-            <MockedProvider addTypename={false}>
-                <RepositoryRow data={data} isSelected={false} />
-            </MockedProvider>,
-        );
-
         const tds = component.root.findAllByType('td');
         expect(tds[0].children).toContain('Repo name');
     });
 });
-
