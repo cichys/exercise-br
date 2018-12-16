@@ -2,9 +2,10 @@ import gql from 'graphql-tag';
 
 
 const SELECT_REPOSITORY = gql`
-    mutation($id: ID!) {
-        selectRepository(id: $id) @client {
+    mutation($id: ID!, $isSelected: Boolean!) {
+        selectRepository(id: $id, isSelected: $isSelected) @client {
             id
+            isSelected
         }
     }
 `;

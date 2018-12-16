@@ -10,5 +10,4 @@ const GET_REPOSITORIES = gql`
     }
 `;
 
-
 export default GET_REPOSITORIES;

@@ -7,18 +7,14 @@ import './assets/css/index.css';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 import config from './config/config';
-
-
-const selectRepository = (_, { id }, { cache }) => {
-    console.log(id)
-};
+import selectRepository from './graphql/resolvers/selectRepository';
 
 
 const client = new ApolloClient({
     uri: config.api.url,
     clientState: {
         defaults: {
-            selectedRepositoryId: null
+            selectedRepositoryIds: []
         },
         resolvers: {
             Mutation: {

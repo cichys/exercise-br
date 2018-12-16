@@ -2,7 +2,7 @@ import React from 'react';
 import { Query } from 'react-apollo';
 
 import GET_REPOSITORIES from '../graphql/queries/getRepositories';
-import RepositoryTable from '../components/RepositoryTable';
+import RepositoryTable from '../containers/RepositoryTable';
 
 
 const RepositoryListContainer = () => (
